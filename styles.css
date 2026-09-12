@@ -1,11 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap");
+
 :root {
   color-scheme: light;
-  --bg: #f6f7fb;
-  --surface: #ffffff;
-  --text: #1f2937;
-  --muted: #4b5563;
-  --brand: #1f6feb;
-  --border: #dce3ee;
+  --bg: #84869f;
+  --surface: rgba(255, 255, 255, 0.82);
+  --text: #010101;
+  --muted: #182b3e;
+  --brand: #b9dfed;
+  --brand-text: #0a2647;
+  --border: rgba(255, 255, 255, 0.55);
 }
 
 * {
@@ -14,29 +17,42 @@
 
 body {
   margin: 0;
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(180deg, #eef3ff 0%, var(--bg) 40%, var(--bg) 100%);
+  font-family: "Manrope", "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #84869f 0%, #9da4ba 58%, #b9dfed 100%);
   color: var(--text);
   line-height: 1.6;
 }
 
 .page {
-  max-width: 860px;
+  max-width: 580px;
   margin: 0 auto;
-  padding: 3rem 1.25rem 4rem;
+  padding: 2.5rem 1.25rem 4rem;
 }
 
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  border-radius: 28px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(8px);
+  text-align: center;
+}
+
+.profile-image {
+  display: block;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1.25rem;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
 }
 
 h1 {
   margin: 0;
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
   line-height: 1.2;
 }
 
@@ -52,7 +68,7 @@ p {
 
 .lead {
   margin-top: 1rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--text);
 }
 
@@ -61,8 +77,8 @@ p {
   margin-bottom: 0.9rem;
   padding: 0.25rem 0.65rem;
   border-radius: 999px;
-  background: #e8efff;
-  color: #113a87;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--brand-text);
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -70,12 +86,18 @@ p {
 
 .highlights {
   margin: 1rem 0 0;
-  padding-left: 1.25rem;
+  padding: 0;
+  list-style: none;
 }
 
 .highlights li {
-  margin: 0.4rem 0;
-  color: var(--muted);
+  margin: 0.75rem 0;
+  padding: 0.8rem 1rem;
+  border-radius: 14px;
+  background: var(--brand);
+  color: var(--brand-text);
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
 .cta {
@@ -84,21 +106,32 @@ p {
   border-top: 1px solid var(--border);
 }
 
+.cta h2 {
+  margin-top: 0;
+}
+
 .email {
   display: inline-block;
-  margin-top: 0.35rem;
+  margin-top: 0.65rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 14px;
   font-weight: 600;
-  color: var(--brand);
+  background: var(--brand);
+  color: var(--brand-text);
   text-decoration: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
 .email:hover,
 .email:focus-visible {
-  text-decoration: underline;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16);
 }
 
 @media (max-width: 640px) {
   .card {
-    padding: 1.35rem;
+    padding: 2rem 1.25rem;
   }
 }
