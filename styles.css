@@ -388,6 +388,50 @@ h2 {
   font-size: 1.5rem;
 }
 
+.custom-show-card {
+  background: var(--brand-text);
+  color: var(--brand);
+}
+
+.custom-show-card:hover,
+.custom-show-card:focus-visible {
+  background: #12395c;
+}
+
+.custom-show-card .show-card-number,
+.custom-show-card .show-card-arrow,
+.custom-show-card p {
+  color: var(--brand);
+}
+
+.custom-show-mark {
+  display: grid;
+  width: min(100%, 360px);
+  margin: 1rem auto 1.25rem;
+  transform: rotate(-4deg);
+}
+
+.custom-show-mark span {
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--brand);
+  color: var(--brand);
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.custom-show-mark span:nth-child(2) {
+  margin: -1px 1.5rem;
+  background: var(--brand);
+  color: var(--brand-text);
+}
+
+.custom-show-card h2 {
+  color: var(--brand);
+}
+
 .show-page .site-header {
   margin-bottom: 0;
 }
