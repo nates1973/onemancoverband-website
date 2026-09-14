@@ -262,7 +262,7 @@ h2 {
 .repertoire {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: end;
+  align-items: start;
   gap: 4rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -303,6 +303,12 @@ h2 {
 .genre-list span {
   color: var(--text);
   font-weight: 400;
+}
+
+.repertoire-blurb {
+  margin: 0.75rem 0 1rem;
+  color: var(--muted);
+  font-size: 1.05rem;
 }
 
 .text-link {
