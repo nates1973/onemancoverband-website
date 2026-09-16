@@ -328,6 +328,39 @@ h2 {
   color: var(--muted);
 }
 
+.reviews-heading {
+  margin-bottom: 2rem;
+}
+
+.reviews-panel {
+  align-self: start;
+}
+
+.review-quote {
+  margin: 0;
+  padding: 1.5rem 0 0 1.5rem;
+  border-left: 3px solid var(--brand-text);
+}
+
+.review-quote p {
+  max-width: 34rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-style: italic;
+  color: var(--text);
+}
+
+.review-quote footer {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.reviews-cta {
+  max-width: 34rem;
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
 .genre-list {
   color: var(--brand-text);
   font-size: clamp(1.3rem, 3vw, 2.2rem);
@@ -702,7 +735,8 @@ h2 {
     max-width: 300px;
   }
 
-  .reviews-empty {
+  .reviews-empty,
+  .reviews-panel {
     margin-top: 2rem;
   }
 
